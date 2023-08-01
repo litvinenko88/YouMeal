@@ -1,7 +1,5 @@
-import styles from "./App.module.sass";
-
 function App() {
-  return <div className={styles.wrapper}>Ghbdtn</div>;
+  return <div>fffffff</div>;
 }
 
 export default App;

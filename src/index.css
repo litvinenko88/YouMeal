@@ -1,0 +1,28 @@
+@import "./assets/fonts/stylesheet.css";
+@import "reset.css";
+@import "normalize.css";
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+:root {
+  --color-gray: #f2f2f3;
+  --color-white: #fff;
+  --color-orange: #ff7020;
+  --color-black: #000;
+  --color-light-orange: #ffab08;
+  --50: 5rem;
+  --40: 4rem;
+  --24: 2.4rem;
+  --16: 1.6rem;
+  --12: 1.2rem;
+}
