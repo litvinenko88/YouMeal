@@ -62,8 +62,8 @@ const ICONS_ARRAY = [
 function Navigation() {
   return (
     <ul className={styles.wrapper}>
-      {ICONS_ARRAY.map((item) => (
-        <NavigationList icons={item.icons} text={item.text} />
+      {ICONS_ARRAY.map((item, i) => (
+        <NavigationList key={i} icons={item.icons} text={item.text} />
       ))}
     </ul>
   );
