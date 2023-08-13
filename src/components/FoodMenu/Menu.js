@@ -6,8 +6,13 @@ import GetMenu from "../Utils/GetMenu";
 function Menu() {
   const data = useContext(MenuContext);
   
+  async function GetMenuData () {
+    const s = await GetMenu(data);
+
+    console.log(s);
+  }
+  GetMenuData()
   
-  GetMenu(data);
   return;
 }
 

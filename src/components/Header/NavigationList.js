@@ -2,9 +2,9 @@ import styles from "./NavigationList.module.css";
 import cn from "classnames";
 
 function NavigationList(props) {
+  
   function clickHandler() {
     props.onClickHandler(props.id);
-    console.log(props.isActiv, props.id);
   }
 
   return (

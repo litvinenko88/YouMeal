@@ -6,11 +6,8 @@ import { MenuContext } from "../../context/MenuContext";
 function Navigation() {
   const data = useContext(MenuContext);
 
-  const [activ, setActiv] = useState(0);
-  
-
   function clickHandler(id) {
-    setActiv(id);
+    data.setActiv(id);
   }
 
   return (
@@ -21,7 +18,7 @@ function Navigation() {
           id={item.id}
           icons={item.icons}
           text={item.text}
-          isActiv={activ === item.id}
+          isActiv={data.activ === item.id}
           onClickHandler={clickHandler}
         />
       ))}
