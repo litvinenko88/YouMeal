@@ -1,8 +1,8 @@
-.wrapper {
+.container {
   width: 30rem;
+  background: var(--color-white);
   max-height: 46.7rem;
   padding: 16px;
-  background: var(--color-white);
   border-radius: 18px;
 }
 .box-top-text {
@@ -29,6 +29,13 @@
   margin-bottom: 1.6rem;
   max-height: 25.3rem;
   overflow: auto;
+}
+.container-food::-webkit-scrollbar {
+  width: 3px;
+}
+.container-food::-webkit-scrollbar-thumb {
+  background-color: var(--color-light-orange);
+  border-radius: 20px;
 }
 .box-buttom-text {
   display: flex;

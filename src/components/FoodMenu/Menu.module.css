@@ -1,12 +1,19 @@
 .menu {
-  width: 100%;
+  width: 70%;
+  max-height: 87rem;
+  overflow: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 500px;
   gap: 3rem;
 }
-
+.menu::-webkit-scrollbar {
+  width: 5px;
+}
+.menu::-webkit-scrollbar-thumb {
+  background-color: var(--color-light-orange);
+  border-radius: 20px;
+}
 .error-container {
   margin: 0 auto;
   text-align: center;
