@@ -6,7 +6,6 @@ import MenuList from "./MenuList";
 
 function Menu() {
   const data = useContext(MenuContext);
-
   const [post, setPost] = useState([]);
 
   useEffect(() => {
@@ -15,20 +14,33 @@ function Menu() {
       .then((response) => {
         setPost(response.data);
       })
-      .catch((error) => console.error(error));
+      .catch((error) =>
+        setPost({
+          errorMessage: error.response.status,
+        })
+      );
   }, [data.activ]);
 
   return (
     <ul className={styles.menu}>
-      {post.map((item) => (
-        <MenuList
-          key={item.id}
-          img={item.img}
-          price={item.price}
-          title={item.title}
-          weight={item.weight}
-        />
-      ))}
+      {post.errorMessage ? (
+        <div className={styles["error-container"]}>
+          <h2 className={styles.error}>{post.errorMessage}</h2>
+          <h2 className={styles["error-message"]}>
+            Непредвиденная ошибка! Перезагрузите страницу или попробуйте позже!
+          </h2>
+        </div>
+      ) : (
+        post.map((item) => (
+          <MenuList
+            key={item.id}
+            img={item.img}
+            price={item.price}
+            title={item.title}
+            weight={item.weight}
+          />
+        ))
+      )}
     </ul>
   );
 }

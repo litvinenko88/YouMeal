@@ -1,0 +1,77 @@
+.wrapper {
+  width: 30rem;
+  max-height: 46.7rem;
+  padding: 16px;
+  background: var(--color-white);
+  border-radius: 18px;
+}
+.box-top-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.top-text {
+  font-size: var(--24);
+  font-weight: 600;
+  line-height: 2.4rem;
+  color: var(--color-black);
+}
+
+.top-number {
+  font-size: var(--12);
+  font-weight: 400;
+  padding: 0.5rem 1.6rem;
+  background: var(--color-gray);
+  border-radius: 6px;
+}
+.container-food {
+  margin-bottom: 1.6rem;
+  max-height: 25.3rem;
+  overflow: auto;
+}
+.box-buttom-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+.button-text {
+  font-size: var(--16);
+  font-weight: 400;
+  line-height: 2.1rem;
+  color: var(--color-black);
+}
+.button-amount {
+  font-size: var(--16);
+  font-weight: 400;
+  line-height: 2.1rem;
+  color: var(--color-black);
+}
+.button-order {
+  width: 100%;
+  padding: 1.1rem 0;
+  font-size: var(--16);
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: var(--color-white);
+  background: var(--color-orange);
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 1.2rem;
+}
+.dilivery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.delivery-text {
+  font-size: var(--12);
+  font-weight: 400;
+  color: var(--color-black);
+}
+.delivery-icons {
+  width: 2.4rem;
+  height: 2.4rem;
+}

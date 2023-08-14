@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-gray);
+  border-bottom: 1px solid var(--color-gray);
+  padding: 1.5rem 0;
+}
+.box-food {
+  display: flex;
+}
+.img {
+  width: 64px;
+  height: 52px;
+  margin-right: 6px;
+  border-radius: 8px;
+}
+.title {
+  font-size: var(--12);
+  font-weight: 400;
+  color: var(--color-black);
+  line-height: normal;
+}
+.weight {
+  font-size: var(--12);
+  font-weight: 400;
+  color: #b1b1b1;
+  line-height: normal;
+}
+.price {
+  font-size: var(--12);
+  font-weight: 400;
+  color: var(--color-black);
+}
+.container-quantity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-gray);
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+}
+.btn-minus {
+  background: none;
+  border: none;
+}
+.btn-plus {
+  background: none;
+  border: none;
+}

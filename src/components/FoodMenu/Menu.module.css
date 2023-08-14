@@ -1,0 +1,32 @@
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 500px;
+  gap: 3rem;
+}
+
+.error-container {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5rem;
+}
+.error {
+  font-size: 15rem;
+  margin-bottom: 4rem;
+  font-weight: 600;
+  color: var(--color-light-orange);
+  animation: blinker 3s linear infinite;
+}
+.error-message {
+  font-size: var(--24);
+  color: var(--color-black);
+  line-height: 35px;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
