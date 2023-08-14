@@ -50,3 +50,9 @@
   background: none;
   border: none;
 }
+.btn-minus:active{
+  transform: scale(0.98);
+}
+.btn-plus:active{
+  transform: scale(0.98);
+}

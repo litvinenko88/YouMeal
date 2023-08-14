@@ -66,6 +66,10 @@
   border-radius: 12px;
   border: none;
   margin-bottom: 1.2rem;
+  cursor: pointer;
+}
+.button-order:active {
+  transform: scale(0.98);
 }
 .dilivery-container {
   display: flex;
