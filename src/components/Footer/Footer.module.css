@@ -1,0 +1,54 @@
+.wrapper {
+  background: var(--color-white);
+  padding: 7.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  margin-bottom: 7rem;
+}
+.box1 {
+  display: flex;
+  align-items: center;
+}
+.box1 i {
+  margin-right: 5px;
+  font-size: var(--12);
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--color-black);
+}
+.box1 p {
+  font-size: var(--12);
+  font-weight: 400;
+  color: var(--color-black);
+}
+.box2 {
+  display: flex;
+  align-items: center;
+}
+.heading {
+  font-size: var(--24);
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: var(--color-black);
+  margin-bottom: 2.5rem;
+}
+.box2 p {
+  font-size: var(--16);
+  font-weight: 400;
+  line-height: 2.1rem;
+  color: var(--color-black);
+}
+
+.box3 i {
+  font-size: 3.6rem;
+  color: var(--color-orange);
+  cursor: pointer;
+}
+.box3 a {
+   margin-right: 1.6rem;
+}
+.box3 a:last-child {
+  margin-right: 0;
+}

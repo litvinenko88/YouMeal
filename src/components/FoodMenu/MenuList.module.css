@@ -1,12 +1,11 @@
 .wrapper {
-  max-width: 30rem;
-  height: 41.1rem;
+  max-width: 100%;
   padding: 1.2rem;
   background: var(--color-white);
   border-radius: 18px;
 }
 .img {
-  width: 27.6rem;
+  width: 100%;
   height: 22rem;
   border-radius: 12px;
   margin-bottom: 1.6rem;
@@ -46,4 +45,23 @@
 }
 .button:active {
   transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .img{
+    height: 12rem;
+  }
+  .price{
+    font-size: var(--16);
+  }
+  .title{
+    font-size: var(--12);
+    margin-bottom: 1.6rem;
+  }
+  .weight{
+    font-size: var(--12);
+  }
+  .button{
+    font-size: var(--12);
+  }
 }

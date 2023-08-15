@@ -11,25 +11,28 @@ function Basket() {
           <p className={styles["top-number"]}>4</p>
         </div>
 
-        <ul className={styles["container-food"]}>
-          <BasketList />
-        </ul>
+        {/* <h2>Тут пока пусто :( </h2> */}
+        <div className={styles["display-wrapper"]}>
+          <ul className={styles["container-food"]}>
+            <BasketList />
+          </ul>
 
-        <div className={styles["container-order"]}>
-          <div className={styles["box-buttom-text"]}>
-            <h2 className={styles["button-text"]}>Итого</h2>
-            <p className={styles["button-amount"]}>1200р</p>
-          </div>
+          <div className={styles["container-order"]}>
+            <div className={styles["box-buttom-text"]}>
+              <h2 className={styles["button-text"]}>Итого</h2>
+              <p className={styles["button-amount"]}>1200р</p>
+            </div>
 
-          <button className={styles["button-order"]}>Оформить заказ</button>
+            <button className={styles["button-order"]}>Оформить заказ</button>
 
-          <div className={styles["dilivery-container"]}>
-            <p className={styles["delivery-text"]}>Бесплатная доставка</p>
-            <img
-              className={styles["delivery-icons"]}
-              src={delivery}
-              alt="Иконка"
-            />
+            <div className={styles["dilivery-container"]}>
+              <p className={styles["delivery-text"]}>Бесплатная доставка</p>
+              <img
+                className={styles["delivery-icons"]}
+                src={delivery}
+                alt="Иконка"
+              />
+            </div>
           </div>
         </div>
       </div>

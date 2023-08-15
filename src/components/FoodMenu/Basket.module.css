@@ -25,6 +25,9 @@
   background: var(--color-gray);
   border-radius: 6px;
 }
+/* .container-display {
+  display: none;
+} */
 .container-food {
   margin-bottom: 1.6rem;
   max-height: 25.3rem;
@@ -85,4 +88,14 @@
 .delivery-icons {
   width: 2.4rem;
   height: 2.4rem;
+}
+
+@media (max-width: 998px) {
+  .wrapper {
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  .container{
+    width: 40rem;
+  }
 }
