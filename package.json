@@ -1,7 +1,7 @@
 {
   "name": "you-meal",
+  "homepage": "http://litvinenko88.github.io/YouMeal",
   "version": "0.1.0",
-  "homepages": "https://litvinenko88.github.io/YouMeal",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
