@@ -1,8 +1,8 @@
 {
   "name": "you-meal",
   "version": "0.1.0",
-  "homepages": "https://litvinenko88.github.io/YouMeal/",
-  "private": true,
+  "homepages": "https://litvinenko88.github.io/YouMeal",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
@@ -15,6 +15,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "reset.css": "^2.0.2",
     "web-vitals": "^3.4.0"
