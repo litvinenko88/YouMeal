@@ -110,6 +110,10 @@
   }
   .heading {
     margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  .box2 p {
+    font-size: 1.2rem;
   }
   .box:nth-child(1) {
     grid-column: 1/13;
@@ -124,5 +128,8 @@
     grid-column: 1/13;
     grid-row: 3/4;
     margin-bottom: 3rem;
+  }
+  .logo{
+    height: 3.8rem;
   }
 }
