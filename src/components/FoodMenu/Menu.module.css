@@ -52,7 +52,7 @@
   .menu {
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
-    max-height: 65rem;
+    max-height: 61rem;
     gap: 1rem;
   }
 }
@@ -61,7 +61,6 @@
   .menu {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
-    max-height: 61rem;
     gap: 1rem;
   }
 }

@@ -1,11 +1,14 @@
 .wrapper {
   background: var(--color-white);
   padding: 7.5rem;
-  display: flex;
-  justify-content: space-between;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 6rem;
 }
 .logo {
-  margin-bottom: 7rem;
+  height: 5.8rem;
 }
 .box1 {
   display: flex;
@@ -47,8 +50,17 @@
   cursor: pointer;
 }
 .box3 a {
-   margin-right: 1.6rem;
+  margin-right: 1.6rem;
 }
 .box3 a:last-child {
   margin-right: 0;
+}
+.box:nth-child(1) {
+  grid-column: 1/6;
+}
+.box:nth-child(2) {
+  grid-column: 7/9;
+}
+.box:nth-child(3) {
+  grid-column: 10/12;
 }
