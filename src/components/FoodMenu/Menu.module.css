@@ -2,7 +2,6 @@
   width: 70%;
   max-height: 85.2rem;
   overflow: auto;
-  padding-right: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
@@ -39,20 +38,38 @@
 }
 
 @media screen and (max-width: 1280px) {
-  .menu{
+  .menu {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 998px) {
-  .menu{
+  .menu {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 768px) {
-  .menu{
+  .menu {
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
     max-height: 65rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    max-height: 61rem;
+    gap: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .menu {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 61rem;
+    gap: 1rem;
   }
 }

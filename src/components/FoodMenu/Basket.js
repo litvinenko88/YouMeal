@@ -19,8 +19,8 @@ function Basket() {
 
           <div className={styles["container-order"]}>
             <div className={styles["box-buttom-text"]}>
-              <h2 className={styles["button-text"]}>Итого</h2>
-              <p className={styles["button-amount"]}>1200р</p>
+              <h2 className={styles["buttom-text"]}>Итого</h2>
+              <p className={styles["buttom-amount"]}>1200р</p>
             </div>
 
             <button className={styles["button-order"]}>Оформить заказ</button>

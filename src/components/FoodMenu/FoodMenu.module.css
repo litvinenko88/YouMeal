@@ -16,3 +16,8 @@
       display: block;
    }
 }
+@media (max-width: 576px) {
+   .wrapper{
+      padding-left: 1rem;
+   }
+}

@@ -46,13 +46,13 @@
   align-items: center;
   margin-bottom: 2.4rem;
 }
-.button-text {
+.buttom-text {
   font-size: var(--16);
   font-weight: 400;
   line-height: 2.1rem;
   color: var(--color-black);
 }
-.button-amount {
+.buttom-amount {
   font-size: var(--16);
   font-weight: 400;
   line-height: 2.1rem;
@@ -95,7 +95,30 @@
     margin-bottom: 3rem;
     position: relative;
   }
+  .container {
+    width: 35rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-text {
+    font-size: var(--16);
+  }
+  .top-number {
+    font-size: 10px;
+  }
+  .buttom-text {
+    font-size: var(--12);
+  }
+  .buttom-amount {
+    font-size: var(--12);
+  }
+  .container {
+    width: 30rem;
+  }
+}
+@media (max-width: 480px) {
   .container{
-    width: 40rem;
+    width: 100%;
   }
 }

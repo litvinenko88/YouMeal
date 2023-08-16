@@ -17,3 +17,17 @@
     width: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .wrapper{
+    gap: 15px;
+    padding-left: 3rem;
+  }
+}
+
+@media (max-width: 576px){
+  .wrapper{
+    padding-left: 1rem;
+    gap: 1rem;
+  }
+}

@@ -9,10 +9,11 @@ function Header() {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles["text-container"]}>
-          <img className={styles.headerLago} src={headerLago} alt="Логотип" />
+          <img className={styles.headerLogo} src={headerLago} alt="Логотип" />
         </div>
 
         <div className={styles.containerPic}>
+          
           <img className={styles["img-pic"]} src={Pic} alt="Гамбургер" />
 
           <div className={styles["container-text"]}>
@@ -26,7 +27,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <Navigation/>
+      <Navigation />
     </div>
   );
 }

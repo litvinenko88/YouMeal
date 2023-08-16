@@ -48,20 +48,20 @@
 }
 
 @media (max-width: 768px) {
-  .img{
+  .img {
     height: 12rem;
   }
-  .price{
+  .price {
     font-size: var(--16);
   }
-  .title{
+  .title {
     font-size: var(--12);
     margin-bottom: 1.6rem;
   }
-  .weight{
+  .weight {
     font-size: var(--12);
   }
-  .button{
+  .button {
     font-size: var(--12);
   }
 }

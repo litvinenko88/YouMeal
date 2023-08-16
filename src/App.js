@@ -9,7 +9,7 @@ function App(props) {
     <MenuProvider>
       <Header />
       <FoodMenu />
-      <Footer />
+      {/* <Footer /> */}
     </MenuProvider>
   );
 }
