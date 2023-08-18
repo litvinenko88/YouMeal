@@ -21,6 +21,8 @@ function Menu() {
       );
   }, [data.activ]);
 
+  useEffect(() => {});
+
   return (
     <ul className={styles.menu}>
       {post.errorMessage ? (
@@ -34,6 +36,7 @@ function Menu() {
         post.map((item) => (
           <MenuList
             key={item.id}
+            id={item.id}
             img={item.img}
             price={item.price}
             title={item.title}

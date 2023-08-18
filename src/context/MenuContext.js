@@ -13,6 +13,7 @@ import icon9 from "../assets/icons/btn-9.png";
 export const MenuContext = createContext();
 
 function MenuProvider({ children }) {
+  //menu
   const [activ, setActiv] = useState(1);
   const [menu, setMenu] = useState([
     {

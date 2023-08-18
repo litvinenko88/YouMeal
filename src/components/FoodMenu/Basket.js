@@ -1,40 +1,64 @@
 import styles from "./Basket.module.css";
 import BasketList from "./BasketList";
 import delivery from "../../assets/icons/icon-delivery.png";
+import { BasketContext } from "../../context/BasketContext";
+import { useContext, useRef } from "react";
 
 function Basket() {
+  const basketContext = useContext(BasketContext);
+  const basketNumber = basketContext.items.reduce((curr, item) => {
+    return curr + item.amount;
+  }, 0);
+
+  function submitHandler(event) {
+    event.preventDefault();
+  }
+
+  const totalAmount = `${basketContext.totalAmount.toFixed(2)}₽`;
+  const hesItem = basketContext.items.length > 0;
+
   return (
-    <form className={styles.wrapper}>
+    <form className={styles.wrapper} onSubmit={submitHandler}>
       <div className={styles.container}>
         <div className={styles["box-top-text"]}>
           <h2 className={styles["top-text"]}>Корзина</h2>
-          <p className={styles["top-number"]}>4</p>
+          <p className={styles["top-number"]}>{basketNumber}</p>
         </div>
 
         {/* <h2>Тут пока пусто :( </h2> */}
-        <div className={styles["display-wrapper"]}>
-          <ul className={styles["container-food"]}>
-            <BasketList />
-          </ul>
+        {hesItem && (
+          <div className={styles["display-wrapper"]}>
+            <ul className={styles["container-food"]}>
+              {basketContext.items.map((item) => (
+                <BasketList
+                  key={item.id}
+                  img={item.img}
+                  price={item.price}
+                  title={item.title}
+                  weight={item.weight}
+                />
+              ))}
+            </ul>
 
-          <div className={styles["container-order"]}>
-            <div className={styles["box-buttom-text"]}>
-              <h2 className={styles["buttom-text"]}>Итого</h2>
-              <p className={styles["buttom-amount"]}>1200р</p>
-            </div>
+            <div className={styles["container-order"]}>
+              <div className={styles["box-buttom-text"]}>
+                <h2 className={styles["buttom-text"]}>Итого</h2>
+                <p className={styles["buttom-amount"]}>{totalAmount}</p>
+              </div>
 
-            <button className={styles["button-order"]}>Оформить заказ</button>
+              <button className={styles["button-order"]}>Оформить заказ</button>
 
-            <div className={styles["dilivery-container"]}>
-              <p className={styles["delivery-text"]}>Бесплатная доставка</p>
-              <img
-                className={styles["delivery-icons"]}
-                src={delivery}
-                alt="Иконка"
-              />
+              <div className={styles["dilivery-container"]}>
+                <p className={styles["delivery-text"]}>Бесплатная доставка</p>
+                <img
+                  className={styles["delivery-icons"]}
+                  src={delivery}
+                  alt="Иконка"
+                />
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </form>
   );
