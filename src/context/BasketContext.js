@@ -33,7 +33,6 @@ function BasketProvider({ children }) {
   );
 
   function addItemHandler(item) {
-    console.log(item);
     dispatchBasketAction({
       type: "ADD_ITEM",
       item: item,
