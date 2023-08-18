@@ -13,9 +13,13 @@ function BasketList(props) {
         </div>
       </div>
       <div className={styles["container-quantity"]}>
-        <button className={styles["btn-minus"]}>-</button>
+        <button className={styles["btn-minus"]} onClick={props.onRemove}>
+          -
+        </button>
         <p className={styles["text-quantity"]}>1</p>
-        <button className={styles["btn-plus"]}>+</button>
+        <button className={styles["btn-plus"]} onClick={props.onAdd}>
+          +
+        </button>
       </div>
     </li>
   );

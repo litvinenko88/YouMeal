@@ -17,6 +17,10 @@ function Basket() {
   const totalAmount = `${basketContext.totalAmount.toFixed(2)}₽`;
   const hesItem = basketContext.items.length > 0;
 
+  function removeBasketItemHandler(id) {}
+  function addBasketItemHendler(item) {}
+  // console.log(basketContext.items);
+
   return (
     <form className={styles.wrapper} onSubmit={submitHandler}>
       <div className={styles.container}>
@@ -25,7 +29,7 @@ function Basket() {
           <p className={styles["top-number"]}>{basketNumber}</p>
         </div>
 
-        {/* <h2>Тут пока пусто :( </h2> */}
+        {hesItem || <h2>Тут пока пусто :( </h2>}
         {hesItem && (
           <div className={styles["display-wrapper"]}>
             <ul className={styles["container-food"]}>
@@ -36,6 +40,8 @@ function Basket() {
                   price={item.price}
                   title={item.title}
                   weight={item.weight}
+                  onAdd={addBasketItemHendler.bind(null, item)}
+                  onRemove={removeBasketItemHandler.bind(null, item.id)}
                 />
               ))}
             </ul>

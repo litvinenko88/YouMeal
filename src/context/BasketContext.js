@@ -14,9 +14,32 @@ const defaultBasket = {
 
 function basketReducer(state, action) {
   if (action.type === "ADD_ITEM") {
-    const updatedItems = state.items.concat(action.item);
     const updatedTotalAmount =
       state.totalAmount + action.item.price * action.item.amount;
+
+    const existingBasketItemIndex = state.items.findIndex(
+      (item) => item.id === action.item.id
+    );
+
+    const existingBasketItem = state.items[existingBasketItemIndex];
+
+    let updatedItem;
+    let updatedItems;
+
+    if (existingBasketItem) {
+      updatedItem = {
+        ...existingBasketItem,
+        amount: existingBasketItem.amount + action.item.amount,
+      };
+
+      updatedItems = [...state.items];
+      updatedItems[existingBasketItemIndex] = updatedItem;
+    } else {
+      updatedItem = {
+        ...action.item,
+      };
+      updatedItems = state.items.concat(updatedItem);
+    }
 
     return {
       items: updatedItems,
