@@ -25,9 +25,7 @@
   background: var(--color-gray);
   border-radius: 6px;
 }
-/* .container-display {
-  display: none;
-} */
+
 .container-food {
   margin-bottom: 1.6rem;
   max-height: 25.3rem;
@@ -118,7 +116,12 @@
   }
 }
 @media (max-width: 576px) {
-  .container{
+  .wrapper {
+    position: relative;
+  }
+  .container {
     width: 100%;
+    position: absolute;
+    top: -12.5rem;
   }
 }

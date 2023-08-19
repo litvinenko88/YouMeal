@@ -47,6 +47,10 @@ function basketReducer(state, action) {
     };
   }
 
+  if (action.type === "REMOVE_ITEM") {
+   
+  }
+
   return defaultBasket;
 }
 

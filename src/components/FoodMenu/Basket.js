@@ -18,7 +18,7 @@ function Basket() {
   const hesItem = basketContext.items.length > 0;
 
   function removeBasketItemHandler(id) {
-    // basketContext.removeItem(id);
+    basketContext.removeItem(id);
   }
   function addBasketItemHendler(item) {
     basketContext.addItem({ ...item, amount: 1 });
@@ -45,7 +45,7 @@ function Basket() {
                   weight={item.weight}
                   amount={item.amount}
                   onAdd={addBasketItemHendler.bind(null, item)}
-                  onRemove={removeBasketItemHandler.bind(null, item.id)}
+                  onRemove={removeBasketItemHandler.bind(null, item)}
                 />
               ))}
             </ul>
