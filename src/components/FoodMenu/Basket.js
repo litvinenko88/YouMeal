@@ -17,9 +17,12 @@ function Basket() {
   const totalAmount = `${basketContext.totalAmount.toFixed(2)}₽`;
   const hesItem = basketContext.items.length > 0;
 
-  function removeBasketItemHandler(id) {}
-  function addBasketItemHendler(item) {}
-  // console.log(basketContext.items);
+  function removeBasketItemHandler(id) {
+    // basketContext.removeItem(id);
+  }
+  function addBasketItemHendler(item) {
+    basketContext.addItem({ ...item, amount: 1 });
+  }
 
   return (
     <form className={styles.wrapper} onSubmit={submitHandler}>
@@ -40,6 +43,7 @@ function Basket() {
                   price={item.price}
                   title={item.title}
                   weight={item.weight}
+                  amount={item.amount}
                   onAdd={addBasketItemHendler.bind(null, item)}
                   onRemove={removeBasketItemHandler.bind(null, item.id)}
                 />

@@ -46,6 +46,7 @@ function basketReducer(state, action) {
       totalAmount: updatedTotalAmount,
     };
   }
+
   return defaultBasket;
 }
 
