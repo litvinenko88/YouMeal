@@ -1,10 +1,10 @@
 import React, { createContext, useReducer } from "react";
 
 export const BasketContext = createContext({
-  items: [], //корзина
-  totalAmount: 0, // сумма в корзине
-  addItem: (item) => {}, //добавить элимент
-  removeItem: (id) => {}, //Удаляет элимент
+  items: [],
+  totalAmount: 0,
+  addItems: (item) => {},
+  removeItems: (id) => {},
 });
 
 const defaultBasket = {
@@ -14,45 +14,20 @@ const defaultBasket = {
 
 function basketReducer(state, action) {
   if (action.type === "ADD_ITEM") {
+    const updatedItems = state.items.concat(action.item); // Добавляем элимент в массив карзины items
     const updatedTotalAmount =
-      state.totalAmount + action.item.price * action.item.amount;
+      state.totalAmount + action.item.price * action.item.amount; // Подсчет стоимости блюда
 
-    const existingBasketItemIndex = state.items.findIndex(
-      (item) => item.id === action.item.id
-    );
-
-    const existingBasketItem = state.items[existingBasketItemIndex];
-
-    let updatedItem;
-    let updatedItems;
-
-    if (existingBasketItem) {
-      updatedItem = {
-        ...existingBasketItem,
-        amount: existingBasketItem.amount + action.item.amount,
-      };
-
-      updatedItems = [...state.items];
-      updatedItems[existingBasketItemIndex] = updatedItem;
-    } else {
-      updatedItem = {
-        ...action.item,
-      };
-      updatedItems = state.items.concat(updatedItem);
-    }
-
+    //Тоесть эта часть кода возвращает в defaultBasket новое значение
     return {
       items: updatedItems,
       totalAmount: updatedTotalAmount,
     };
   }
-
-  if (action.type === "REMOVE_ITEM") {
-   
-  }
-
   return defaultBasket;
 }
+
+//basketState = defaultBasket, dispatchBasketAction = basketReducer
 
 function BasketProvider({ children }) {
   const [basketState, dispatchBasketAction] = useReducer(
@@ -66,7 +41,6 @@ function BasketProvider({ children }) {
       item: item,
     });
   }
-
   function removeItemHandler(id) {
     dispatchBasketAction({
       type: "REMOVE_ITEM",
@@ -77,8 +51,8 @@ function BasketProvider({ children }) {
   const basketContext = {
     items: basketState.items,
     totalAmount: basketState.totalAmount,
-    addItem: addItemHandler,
-    removeItem: removeItemHandler,
+    addItems: addItemHandler,
+    removeItems: removeItemHandler,
   };
 
   return (

@@ -21,8 +21,6 @@ function Menu() {
       );
   }, [data.activ]);
 
-  useEffect(() => {});
-
   return (
     <ul className={styles.menu}>
       {post.errorMessage ? (

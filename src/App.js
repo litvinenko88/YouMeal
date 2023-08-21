@@ -6,13 +6,11 @@ import Footer from "./components/Footer/Footer";
 
 function App(props) {
   return (
-    <StrictMode>
-      <MenuProvider>
-        <Header />
-        <FoodMenu />
-        <Footer />
-      </MenuProvider>
-    </StrictMode>
+    <MenuProvider>
+      <Header />
+      <FoodMenu />
+      <Footer />
+    </MenuProvider>
   );
 }
 

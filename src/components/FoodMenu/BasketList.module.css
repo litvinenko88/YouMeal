@@ -42,17 +42,27 @@
   padding: 0.9rem 1.2rem;
   border-radius: 12px;
 }
+.text-quantity {
+  background: none;
+  border: none;
+  width: 15px;
+  font-size: var(--16);
+}
 .btn-minus {
   background: none;
   border: none;
+  padding: 3px;
+  font-size: var(--16);
 }
 .btn-plus {
   background: none;
   border: none;
+  padding: 3px;
+  font-size: var(--16);
 }
-.btn-minus:active{
+.btn-minus:active {
   transform: scale(0.98);
 }
-.btn-plus:active{
+.btn-plus:active {
   transform: scale(0.98);
 }

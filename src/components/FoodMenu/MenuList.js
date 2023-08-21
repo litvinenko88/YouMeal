@@ -1,12 +1,12 @@
 import styles from "./MenuList.module.css";
-import { useContext } from "react";
 import { BasketContext } from "../../context/BasketContext";
+import { useContext } from "react";
 
 function MenuList(props) {
   const basketContext = useContext(BasketContext);
 
-  function addToBasketHandler(amount) {
-    basketContext.addItem({
+  function addToBasketHendler() {
+    basketContext.addItems({
       id: props.id,
       img: props.img,
       price: props.price,
@@ -25,7 +25,7 @@ function MenuList(props) {
         <p className={styles.title}>{props.title}</p>
         <p className={styles.weight}>{props.weight}г</p>
       </div>
-      <button className={styles.button} onClick={addToBasketHandler}>
+      <button className={styles.button} onClick={addToBasketHendler}>
         Добавить
       </button>
     </li>

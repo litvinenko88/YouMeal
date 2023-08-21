@@ -2,14 +2,13 @@
   width: 30rem;
   background: var(--color-white);
   max-height: 46.7rem;
-  padding: 16px;
+  padding: 1.6rem;
   border-radius: 18px;
 }
 .box-top-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.2rem;
 }
 .top-text {
   font-size: var(--24);
@@ -30,6 +29,7 @@
   margin-bottom: 1.6rem;
   max-height: 25.3rem;
   overflow: auto;
+  margin-top: 1.2rem;
 }
 .container-food::-webkit-scrollbar {
   width: 3px;
@@ -87,6 +87,17 @@
   width: 2.4rem;
   height: 2.4rem;
 }
+.close-basket {
+  background: none;
+  border: none;
+  font-size: var(--12);
+  color: #b1b1b1;
+  display: none;
+  cursor: pointer;
+}
+.close-basket:active {
+  transform: scale(0.98);
+}
 
 @media (max-width: 998px) {
   .wrapper {
@@ -95,6 +106,19 @@
   }
   .container {
     width: 35rem;
+    position: absolute;
+    top: -10rem;
+  }
+
+  .close-basket {
+    display: block;
+  }
+  .delivery-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .dilivery-container {
+    justify-content: flex-start;
   }
 }
 
@@ -121,7 +145,5 @@
   }
   .container {
     width: 100%;
-    position: absolute;
-    top: -12.5rem;
   }
 }

@@ -18,6 +18,12 @@
   }
 }
 
+@media (max-width: 988px) {
+  .wrapper{
+    margin-bottom: 13rem;
+  }
+}
+
 @media (max-width: 768px) {
   .wrapper{
     gap: 15px;
@@ -29,6 +35,6 @@
   .wrapper{
     padding-left: 1rem;
     gap: 1rem;
-    margin-bottom: 15rem;
+    /* margin-bottom: 15rem; */
   }
 }
