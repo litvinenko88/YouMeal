@@ -24,9 +24,11 @@
   background: var(--color-gray);
   border-radius: 6px;
 }
-.text-empty{
+.text-empty {
   font-size: var(--16);
   margin-top: 1.5rem;
+  color: var(--color-black);
+  font-weight: 600;
 }
 .container-food {
   margin-bottom: 1.6rem;
