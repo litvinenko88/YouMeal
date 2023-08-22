@@ -112,7 +112,7 @@
   .container {
     width: 35rem;
     position: absolute;
-    top: -10rem;
+    top: -12rem;
   }
 
   .close-basket {
@@ -142,8 +142,9 @@
   }
   .container {
     width: 30rem;
+    top: -10rem;
   }
-  .text-empty{
+  .text-empty {
     font-size: var(--12);
     margin-top: 1rem;
   }

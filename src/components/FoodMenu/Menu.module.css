@@ -5,9 +5,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+  padding-right: 1.5rem;
 }
 .menu::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 .menu::-webkit-scrollbar-thumb {
   background-color: var(--color-light-orange);
@@ -54,6 +55,7 @@
     grid-template-columns: repeat(4, 1fr);
     max-height: 61rem;
     gap: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -62,6 +64,10 @@
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    padding-right: 0;
+  }
+  .menu::-webkit-scrollbar {
+    width: 0px;
   }
 }
 @media (max-width: 480px) {

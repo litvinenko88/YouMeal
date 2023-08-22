@@ -18,16 +18,17 @@
   }
 }
 
-@media (max-width: 988px) {
+@media (max-width: 998px) {
   .wrapper{
-    margin-bottom: 13rem;
+    margin-bottom: 15rem;
   }
 }
 
 @media (max-width: 768px) {
   .wrapper{
     gap: 15px;
-    padding-left: 3rem;
+    padding-left: 2rem;
+    margin-bottom: 12rem;
   }
 }
 
