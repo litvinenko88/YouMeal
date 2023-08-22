@@ -143,6 +143,10 @@
   .container {
     width: 30rem;
   }
+  .text-empty{
+    font-size: var(--12);
+    margin-top: 1rem;
+  }
 }
 @media (max-width: 576px) {
   .wrapper {

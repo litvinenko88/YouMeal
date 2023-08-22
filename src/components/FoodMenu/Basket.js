@@ -2,9 +2,10 @@ import styles from "./Basket.module.css";
 import BasketList from "./BasketList";
 import delivery from "../../assets/icons/icon-delivery.png";
 import { BasketContext } from "../../context/BasketContext";
-import React, { useContext, useRef } from "react";
+import React, { useContext, useState } from "react";
 
 function Basket(props) {
+  const [rollUp, setRollUp] = useState(true);
   const basketContext = useContext(BasketContext);
 
   function submitHandler(event) {
@@ -22,18 +23,28 @@ function Basket(props) {
     basketContext.addItems({ ...item, amount: 1 });
   }
   function removeBasketItemHandler(id) {
-    basketContext.removeItems(id)
+    basketContext.removeItems(id);
+  }
+
+  function collapseBasket() {
+    setRollUp(false);
+  }
+
+  function openBasket() {
+    setRollUp(true);
   }
 
   return (
     <form className={styles.wrapper} onSubmit={submitHandler}>
       <div className={styles.container}>
-        <div className={styles["box-top-text"]}>
+        <div className={styles["box-top-text"]} onClick={openBasket}>
           <h2 className={styles["top-text"]}>Корзина</h2>
           <p className={styles["top-number"]}>{basketItemNumber}</p>
         </div>
-        {hasItems || <h2 className={styles['text-empty']}>Тут пока пусто :(</h2>}
-        {hasItems && (
+        {hasItems || (
+          <h2 className={styles["text-empty"]}>Тут пока пусто :(</h2>
+        )}
+        {rollUp && hasItems && (
           <div className={styles["display-wrapper"]}>
             <ul className={styles["container-food"]}>
               {basketContext.items.map((item) => (
@@ -68,7 +79,11 @@ function Basket(props) {
                     alt="Иконка"
                   />
                 </div>
-                <button className={styles["close-basket"]}>Свернуть</button>
+                <button
+                  className={styles["close-basket"]}
+                  onClick={collapseBasket}>
+                  Свернуть
+                </button>
               </div>
             </div>
           </div>
