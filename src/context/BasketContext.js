@@ -57,12 +57,9 @@ function basketReducer(state, action) {
     const updatedTotalAmount = state.totalAmount - existingBasketItem.price; // Подсчет стоимости блюда // Если у элимента существует такой id в массиве и вернет индекс такого элимента если он существует
 
     let updatedItems;
-    
+
     if (existingBasketItem.amount === 1) {
-      updatedItems = state.items.filter((item) => {
-        console.log(item.id);
-      }); //item.id != action.id // state.items[existingBasketItemIndex].amount)
-      // console.log("ggggg");
+      updatedItems = state.items.filter((item) => item.id !== action.item.id); //item.id != action.id // state.items[existingBasketItemIndex].amount)
     } else {
       const updatedItem = {
         ...existingBasketItem,
