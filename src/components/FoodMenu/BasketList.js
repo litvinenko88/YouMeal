@@ -9,8 +9,8 @@ const BasketList = (props) => {
         <img className={styles.img} src={props.img} alt="Блюдо" />
         <div className={styles["container-text"]}>
           <h2 className={styles.title}>{props.title}</h2>
-          <p className={styles.weight}>{props.weight}</p>
-          <p className={styles.price}>{props.price}</p>
+          <p className={styles.weight}>{props.weight}г</p>
+          <p className={styles.price}>{props.price}₽</p>
         </div>
       </div>
       <div className={styles["container-quantity"]}>

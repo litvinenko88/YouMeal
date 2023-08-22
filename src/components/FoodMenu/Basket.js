@@ -32,7 +32,7 @@ function Basket(props) {
           <h2 className={styles["top-text"]}>Корзина</h2>
           <p className={styles["top-number"]}>{basketItemNumber}</p>
         </div>
-
+        {hasItems || <h2 className={styles['text-empty']}>Тут пока пусто :(</h2>}
         {hasItems && (
           <div className={styles["display-wrapper"]}>
             <ul className={styles["container-food"]}>

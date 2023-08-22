@@ -24,7 +24,10 @@
   background: var(--color-gray);
   border-radius: 6px;
 }
-
+.text-empty{
+  font-size: var(--16);
+  margin-top: 1.5rem;
+}
 .container-food {
   margin-bottom: 1.6rem;
   max-height: 25.3rem;
