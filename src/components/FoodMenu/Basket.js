@@ -18,6 +18,13 @@ function Basket(props) {
     return curr + item.amount;
   }, 0);
 
+  function addBasketItemHandler(item) {
+    basketContext.addItems({ ...item, amount: 1 });
+  }
+  function removeBasketItemHandler(id) {
+    basketContext.removeItems(id)
+  }
+
   return (
     <form className={styles.wrapper} onSubmit={submitHandler}>
       <div className={styles.container}>
@@ -37,6 +44,9 @@ function Basket(props) {
                   price={item.price}
                   title={item.title}
                   weight={item.weight}
+                  amount={item.amount}
+                  onAdd={addBasketItemHandler.bind(null, item)}
+                  onRemove={removeBasketItemHandler.bind(null, item)}
                 />
               ))}
             </ul>

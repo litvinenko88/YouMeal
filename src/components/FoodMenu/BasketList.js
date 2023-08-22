@@ -1,8 +1,6 @@
 import styles from "./BasketList.module.css";
 import foto from "../../assets//imgs/pic.png";
 import React from "react";
-import { useContext } from "react";
-import { BasketContext } from "../../context/BasketContext";
 
 const BasketList = (props) => {
   return (
@@ -16,10 +14,14 @@ const BasketList = (props) => {
         </div>
       </div>
       <div className={styles["container-quantity"]}>
-        <button className={styles["btn-minus"]}>-</button>
-        <input className={styles["text-quantity"]} defaultValue="1" disabled />
+        <button className={styles["btn-minus"]} onClick={props.onRemove}>
+          -
+        </button>
+        <p className={styles["text-quantity"]}>{props.amount}</p>
 
-        <button className={styles["btn-plus"]}>+</button>
+        <button className={styles["btn-plus"]} onClick={props.onAdd}>
+          +
+        </button>
       </div>
     </li>
   );

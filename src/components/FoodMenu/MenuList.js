@@ -5,7 +5,7 @@ import { useContext } from "react";
 function MenuList(props) {
   const basketContext = useContext(BasketContext);
 
-  function addToBasketHendler() {
+  function addToBasketHendler(amount) {
     basketContext.addItems({
       id: props.id,
       img: props.img,

@@ -43,9 +43,6 @@
   border-radius: 12px;
 }
 .text-quantity {
-  background: none;
-  border: none;
-  width: 15px;
   font-size: var(--16);
 }
 .btn-minus {
