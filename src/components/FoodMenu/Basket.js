@@ -8,9 +8,9 @@ function Basket(props) {
   const [rollUp, setRollUp] = useState(true);
   const basketContext = useContext(BasketContext);
 
-  function submitHandler(event) {
-    event.preventDefault();
-  }
+  // function submitHandler(event) {
+  //   event.preventDefault();
+  // }
 
   const totalAmount = `${basketContext.totalAmount.toFixed(2)}₽`;
   const hasItems = basketContext.items.length > 0;
@@ -35,7 +35,7 @@ function Basket(props) {
   }
 
   return (
-    <form className={styles.wrapper} onSubmit={submitHandler}>
+    <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles["box-top-text"]} onClick={openBasket}>
           <h2 className={styles["top-text"]}>Корзина</h2>
@@ -89,7 +89,7 @@ function Basket(props) {
           </div>
         )}
       </div>
-    </form>
+    </div>
   );
 }
 
