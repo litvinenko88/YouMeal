@@ -29,6 +29,7 @@
 .box2 {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 .heading {
   font-size: var(--24);
@@ -42,6 +43,9 @@
   font-weight: 400;
   line-height: 2.1rem;
   color: var(--color-black);
+}
+.author {
+  font-size: var(--12);
 }
 
 .box3 i {
@@ -99,6 +103,18 @@
   .box:nth-child(3) {
     grid-column: 7/13;
   }
+  .logo {
+    height: 3.8rem;
+  }
+  .heading {
+    font-size: var(--18);
+  }
+  .box2 p {
+    font-size: 1.2rem;
+  }
+  .box3 i {
+    font-size: 3rem;
+  }
 }
 @media (max-width: 576px) {
   .wrapper {
@@ -129,8 +145,5 @@
     grid-column: 1/6;
     grid-row: 3/4;
     margin-bottom: 3rem;
-  }
-  .logo {
-    height: 3.8rem;
   }
 }

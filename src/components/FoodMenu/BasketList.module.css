@@ -14,6 +14,7 @@
   height: 52px;
   margin-right: 6px;
   border-radius: 8px;
+  object-fit: cover;
 }
 .title {
   font-size: var(--12);
@@ -44,22 +45,37 @@
 }
 .text-quantity {
   font-size: var(--16);
+  font-weight: 400;
 }
 .btn-minus {
   background: none;
   border: none;
   padding: 3px;
   font-size: var(--16);
+  font-weight: 400;
 }
 .btn-plus {
   background: none;
   border: none;
   padding: 3px;
   font-size: var(--16);
+  font-weight: 400;
 }
 .btn-minus:active {
   transform: scale(0.98);
 }
 .btn-plus:active {
   transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .text-quantity {
+    font-size: var(--12);
+  }
+  .btn-minus {
+    font-size: var(--12);
+  }
+  .btn-plus {
+    font-size: var(--12);
+  }
 }

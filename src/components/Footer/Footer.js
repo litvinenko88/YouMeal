@@ -33,9 +33,11 @@ function Footer() {
 
       <div className={styles.box1}>
         <i className="bi bi-c-circle"></i>
-        <p>YouMeal, 2022</p>
+        <p>YourMeal, 2023</p>
       </div>
-      <p>Design: Anastasia Ilina</p>
+      <p className={styles.author}>
+        Author: <a href="https://clck.ru/35QvLT">Litvinenko n.v</a>
+      </p>
     </div>
   );
 }

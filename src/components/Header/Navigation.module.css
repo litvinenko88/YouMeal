@@ -11,7 +11,7 @@
     overflow: auto;
     white-space: nowrap;
     justify-content: flex-start;
-    padding-left: 3rem;
+    padding: 0 3rem;
   }
   .wrapper::-webkit-scrollbar {
     width: 0;
@@ -19,23 +19,22 @@
 }
 
 @media (max-width: 998px) {
-  .wrapper{
+  .wrapper {
     margin-bottom: 15rem;
   }
 }
 
 @media (max-width: 768px) {
-  .wrapper{
+  .wrapper {
     gap: 15px;
     padding-left: 2rem;
     margin-bottom: 12rem;
   }
 }
 
-@media (max-width: 576px){
-  .wrapper{
+@media (max-width: 576px) {
+  .wrapper {
     padding-left: 1rem;
-    gap: 1rem;
-    /* margin-bottom: 15rem; */
+    gap: 0.8rem;
   }
 }

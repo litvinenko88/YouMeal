@@ -6,10 +6,11 @@
   padding: 0.8rem 1.5rem;
   font-size: var(--16);
   color: var(--color-black);
+  font-weight: 400;
   border-radius: 5rem;
   cursor: pointer;
 }
-.icons{
+.icons {
   width: 2.4rem;
 }
 .wrapper:active {
@@ -20,13 +21,8 @@
   background: var(--color-light-orange);
 }
 
-
-@media (max-width: 768px) {
-  .wrapper{
-    font-size: var(--12);
-    padding: 0.8rem 1.5rem;
-  }
-}
 @media (max-width: 576px) {
-
+  .wrapper {
+    font-size: var(--12);
+  }
 }
