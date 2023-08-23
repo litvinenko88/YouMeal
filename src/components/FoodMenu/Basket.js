@@ -2,15 +2,14 @@ import styles from "./Basket.module.css";
 import BasketList from "./BasketList";
 import delivery from "../../assets/icons/icon-delivery.png";
 import { BasketContext } from "../../context/BasketContext";
+import { ModalContext } from "../../context/ModuleContext";
 import React, { useContext, useState } from "react";
+import Button from "../UI/Button";
 
 function Basket(props) {
   const [rollUp, setRollUp] = useState(true);
   const basketContext = useContext(BasketContext);
-
-  // function submitHandler(event) {
-  //   event.preventDefault();
-  // }
+  const modalContext = useContext(ModalContext);
 
   const totalAmount = `${basketContext.totalAmount.toFixed(2)}₽`;
   const hasItems = basketContext.items.length > 0;
@@ -26,18 +25,22 @@ function Basket(props) {
     basketContext.removeItems(id);
   }
 
-  function collapseBasket() {
+  function collapseBasketHandler() {
     setRollUp(false);
   }
 
-  function openBasket() {
+  function openBasketHandler() {
     setRollUp(true);
+  }
+
+  function openModalOrderHandler() {
+    modalContext.openOrder();
   }
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <div className={styles["box-top-text"]} onClick={openBasket}>
+        <div className={styles["box-top-text"]} onClick={openBasketHandler}>
           <h2 className={styles["top-text"]}>Корзина</h2>
           <p className={styles["top-number"]}>{basketItemNumber}</p>
         </div>
@@ -68,7 +71,7 @@ function Basket(props) {
                 <p className={styles["buttom-amount"]}>{totalAmount}</p>
               </div>
 
-              <button className={styles["button-order"]}>Оформить заказ</button>
+              <Button onClick={openModalOrderHandler}>Оформить заказ</Button>
 
               <div className={styles["delivery-wrapper"]}>
                 <div className={styles["dilivery-container"]}>
@@ -81,7 +84,7 @@ function Basket(props) {
                 </div>
                 <button
                   className={styles["close-basket"]}
-                  onClick={collapseBasket}>
+                  onClick={collapseBasketHandler}>
                   Свернуть
                 </button>
               </div>

@@ -30,3 +30,16 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 768px) {
+  .modal {
+    left: 15%;
+    width: 70%;
+  }
+}
+@media (max-width: 576px) {
+  .modal {
+    left: 5%;
+    width: 90%;
+  }
+}

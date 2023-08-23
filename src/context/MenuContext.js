@@ -72,6 +72,7 @@ function MenuProvider({ children }) {
     },
   ]);
 
+  
   return (
     <MenuContext.Provider value={{ menu, activ, setActiv }}>
       {children}

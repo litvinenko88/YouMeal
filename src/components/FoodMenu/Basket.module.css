@@ -61,22 +61,7 @@
   line-height: 2.1rem;
   color: var(--color-black);
 }
-.button-order {
-  width: 100%;
-  padding: 1.1rem 0;
-  font-size: var(--16);
-  font-weight: 400;
-  line-height: 1.6rem;
-  color: var(--color-white);
-  background: var(--color-orange);
-  border-radius: 12px;
-  border: none;
-  margin-bottom: 1.2rem;
-  cursor: pointer;
-}
-.button-order:active {
-  transform: scale(0.98);
-}
+
 .dilivery-container {
   display: flex;
   align-items: center;
@@ -147,9 +132,6 @@
   .text-empty {
     font-size: var(--12);
     margin-top: 1rem;
-  }
-  .button-order {
-    font-size: var(--12);
   }
 }
 @media (max-width: 576px) {

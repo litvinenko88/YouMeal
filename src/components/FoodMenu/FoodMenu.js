@@ -3,7 +3,7 @@ import BasketProvider from "../../context/BasketContext";
 import Basket from "./Basket";
 import Menu from "./Menu";
 
-function FoodMenu() {
+function FoodMenu(props) {
   return (
     <BasketProvider>
       <div className={styles.wrapper}>
