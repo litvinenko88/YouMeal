@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/YouMeal/static/css/main.4bca5fb8.css",
+    "main.css": "/YouMeal/static/css/main.c3eb6d3d.css",
     "main.js": "/YouMeal/static/js/main.5dfc9eca.js",
     "static/media/bootstrap-icons.woff?": "/YouMeal/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
     "static/media/bootstrap-icons.woff2?": "/YouMeal/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
@@ -38,11 +38,11 @@
     "static/media/Nunito-ExtraLight.woff2": "/YouMeal/static/media/Nunito-ExtraLight.8805f90e138c72fdb552.woff2",
     "static/media/pic.png": "/YouMeal/static/media/pic.b932f7869e90b43207e4.png",
     "index.html": "/YouMeal/index.html",
-    "main.4bca5fb8.css.map": "/YouMeal/static/css/main.4bca5fb8.css.map",
+    "main.c3eb6d3d.css.map": "/YouMeal/static/css/main.c3eb6d3d.css.map",
     "main.5dfc9eca.js.map": "/YouMeal/static/js/main.5dfc9eca.js.map"
   },
   "entrypoints": [
-    "static/css/main.4bca5fb8.css",
+    "static/css/main.c3eb6d3d.css",
     "static/js/main.5dfc9eca.js"
   ]
 }
