@@ -1,12 +1,42 @@
 .wrapper {
   padding: 2.4rem;
+  background: var(--color-white);
+  border-radius: 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
 }
 .container-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2.4rem;
+  grid-column: 1 / 15;
 }
+.container-info {
+  display: flex;
+  gap: 1rem;
+  grid-column: 1 / 15;
+  margin-bottom: 4rem;
+}
+.container-btn {
+  grid-column: 1 / 15;
+  display: flex;
+  gap: 1.6rem;
+}
+.box-add {
+  width: 27.6rem;
+  grid-column: 1 / 5;
+  grid-row: 3;
+  margin-right: 1.6rem;
+}
+.box-quantity {
+  grid-column: 5 / 15;
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .close-module {
   font-size: var(--24);
   background: none;
@@ -24,4 +54,85 @@
   font-weight: 600;
   line-height: 4.8rem;
   color: var(--color-black);
+}
+.img {
+  width: 27.6rem;
+  height: 22rem;
+  object-fit: cover;
+  border-radius: 1.6rem;
+}
+.description {
+  font-size: var(--16);
+  font-weight: 400;
+  line-height: 2.1rem;
+  color: var(--color-black);
+  margin-bottom: 1rem;
+}
+.structure {
+  font-size: var(--12);
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: var(--color-black);
+  margin-bottom: 1rem;
+}
+.calories {
+  font-size: var(--12);
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: #b1b1b1;
+}
+.price {
+  font-size: var(--24);
+  font-weight: 600;
+  line-height: 3.1rem;
+  color: var(--color-black);
+}
+
+@media (max-width: 998px) {
+  .title {
+    font-size: 2.8rem;
+  }
+  .img {
+    width: 22.6rem;
+    height: 18rem;
+  }
+  .description {
+    font-size: var(--12);
+  }
+  .structure {
+    font-size: 1rem;
+  }
+  .calories {
+    font-size: 1rem;
+  }
+  .box-add {
+    width: 22.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-info {
+    display: block;
+    text-align: center;
+  }
+  .img {
+    width: 90%;
+    height: 25rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+  .box-add {
+    grid-row: 4;
+    grid-column: 1 / 15;
+    width: 100%;
+  }
+  .box-quantity {
+    grid-row: 3;
+    grid-column: 1 / 15;
+    margin-bottom: 1.6rem;
+  }
+  .price {
+    font-size: var(--16);
+  }
 }

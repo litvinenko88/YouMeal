@@ -6,7 +6,6 @@ import QuantityButton from "../UI/QuantityButton";
 
 const BasketList = (props) => {
   const modalContext = useContext(ModalContext);
-  console.log(modalContext);
 
   return (
     <li className={styles.wrapper}>

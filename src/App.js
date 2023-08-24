@@ -13,7 +13,7 @@ function App(props) {
   return (
     <MenuProvider>
       {modalContext.isOrder && <ModalOrder />}
-      {/* {modalContext.isInfo && <ModalInfo />} */}
+      {modalContext.isInfo && <ModalInfo />}
       <Header />
       <FoodMenu />
       <Footer />

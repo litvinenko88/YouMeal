@@ -11,6 +11,7 @@ const defaultModal = {
 };
 
 function modalReducer(state, action) {
+ 
   if (action.type === "OPEN_ORDER") {
     return { ...state, isOrder: true };
   }
@@ -53,13 +54,7 @@ function ModalProvider({ children }) {
     });
   }
 
-  function addAmountHandler(amount) {
-    console.log(amount);
-    dispatchModuleAction({
-      type: "ADD_AMOUNT",
-      amount: amount,
-    });
-  }
+  function addAmountHandler(amount) {}
 
   const modalContext = {
     amount: moduleState.amount,
@@ -82,43 +77,3 @@ function ModalProvider({ children }) {
 
 export default ModalProvider;
 
-// const initialState = {
-//   isOpen: false,
-//   message: "",
-// };
-
-// function reducer(state, action) {
-//   switch (action.type) {
-//     case "openModal":
-//       return { ...state, isOpen: true };
-//     case "closeModal":
-//       return { ...state, isOpen: false };
-//     default:
-//       throw new Error();
-//   }
-// }
-
-// function App() {
-//   const [state, dispatch] = useReducer(reducer, initialState);
-
-//   function handleOpenModal() {
-//     dispatch({ type: "openModal" });
-//   }
-
-//   function handleCloseModal() {
-//     dispatch({ type: "closeModal" });
-//   }
-
-//   return (
-//     <div>
-//       <button onClick={handleOpenModal}>Открыть модальное окно</button>
-//       {state.isOpen && (
-//         <div>
-//           <h1>Модальное окно</h1>
-//           <p>{state.message}</p>
-//           <button onClick={handleCloseModal}>Закрыть модальное окно</button>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }

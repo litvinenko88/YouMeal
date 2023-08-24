@@ -8,7 +8,6 @@
   background: var(--color-orange);
   border-radius: 12px;
   border: none;
-  margin-bottom: 1.2rem;
   cursor: pointer;
 }
 .button:active {
