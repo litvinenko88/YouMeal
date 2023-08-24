@@ -1,0 +1,27 @@
+.wrapper {
+  padding: 2.4rem;
+}
+.container-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+.close-module {
+  font-size: var(--24);
+  background: none;
+  border: none;
+  position: fixed;
+  right: 2.4rem;
+  color: #b1b1b1;
+  cursor: pointer;
+}
+.close-module:active {
+  transform: scale(0.98);
+}
+.title {
+  font-size: var(--40);
+  font-weight: 600;
+  line-height: 4.8rem;
+  color: var(--color-black);
+}

@@ -5,6 +5,7 @@ import FoodMenu from "./components/FoodMenu/FoodMenu";
 import MenuProvider from "./context/MenuContext";
 import Footer from "./components/Footer/Footer";
 import ModalOrder from "./components/ModalWindow/ModalOrder";
+import ModalInfo from "./components/ModalWindow/ModalInfo";
 
 function App(props) {
   const modalContext = useContext(ModalContext);
@@ -12,6 +13,7 @@ function App(props) {
   return (
     <MenuProvider>
       {modalContext.isOrder && <ModalOrder />}
+      {/* {modalContext.isInfo && <ModalInfo />} */}
       <Header />
       <FoodMenu />
       <Footer />

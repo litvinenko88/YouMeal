@@ -1,8 +1,13 @@
 import styles from "./BasketList.module.css";
-import foto from "../../assets//imgs/pic.png";
+import { ModalContext } from "../../context/ModuleContext";
+import { useContext } from "react";
 import React from "react";
+import QuantityButton from "../UI/QuantityButton";
 
 const BasketList = (props) => {
+  const modalContext = useContext(ModalContext);
+  console.log(modalContext);
+
   return (
     <li className={styles.wrapper}>
       <div className={styles["box-food"]}>
@@ -13,16 +18,11 @@ const BasketList = (props) => {
           <p className={styles.price}>{props.price}₽</p>
         </div>
       </div>
-      <div className={styles["container-quantity"]}>
-        <button className={styles["btn-minus"]} onClick={props.onRemove}>
-          -
-        </button>
-        <p className={styles["text-quantity"]}>{props.amount}</p>
-
-        <button className={styles["btn-plus"]} onClick={props.onAdd}>
-          +
-        </button>
-      </div>
+      <QuantityButton
+        onRemove={props.onRemove}
+        onAdd={props.onAdd}
+        amount={props.amount}
+      />
     </li>
   );
 };

@@ -14,6 +14,7 @@ function ModalOrder(props) {
 
   function closeModalOrderHandler() {
     modalContext.closeOrder();
+    document.body.style.overflow = "unset";
   }
 
   return (

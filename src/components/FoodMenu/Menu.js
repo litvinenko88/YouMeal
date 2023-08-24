@@ -39,6 +39,9 @@ function Menu() {
             price={item.price}
             title={item.title}
             weight={item.weight}
+            description={item.description}
+            structure={item.structure}
+            calories={item.calories}
           />
         ))
       )}

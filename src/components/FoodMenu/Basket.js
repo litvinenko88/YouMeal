@@ -35,6 +35,7 @@ function Basket(props) {
 
   function openModalOrderHandler() {
     modalContext.openOrder();
+    document.body.style.overflow = "hidden";
   }
 
   return (

@@ -4,6 +4,9 @@
   background: var(--color-white);
   border-radius: 18px;
 }
+.container {
+  cursor: pointer;
+}
 .img {
   width: 100%;
   height: 22rem;

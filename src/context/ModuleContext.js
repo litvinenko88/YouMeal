@@ -1,28 +1,27 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useContext } from "react";
+import { BasketContext } from "./BasketContext";
 
-export const ModalContext = createContext({
-  openModalOrder: () => {},
-  closeModalOrder: () => {},
-  openInfoModal: () => {},
-  closeInfoModal: () => {},
-});
+export const ModalContext = createContext({});
 
 const defaultModal = {
   isOrder: false,
   isInfo: false,
+  itemInfo: [],
+  amount: 1,
 };
 
 function modalReducer(state, action) {
-  switch (action.type) {
-    case "OPEN_ORDER":
-      return { ...state, isOrder: true };
-    case "CLOSE_ORDER":
-      return { ...state, isOrder: false };
-    case "OPEN_INFO":
-      return { ...state, isInfo: true };
-    case "CLOSE_INFO":
-      return { ...state, isInfo: true };
-    default:
+  if (action.type === "OPEN_ORDER") {
+    return { ...state, isOrder: true };
+  }
+  if (action.type === "CLOSE_ORDER") {
+    return { ...state, isOrder: false };
+  }
+  if (action.type === "OPEN_INFO") {
+    return { ...state, isInfo: true, itemInfo: action.item };
+  }
+  if (action.type === "CLOSE_INFO") {
+    return { ...state, isInfo: false };
   }
 }
 
@@ -42,9 +41,10 @@ function ModalProvider({ children }) {
       type: "CLOSE_ORDER",
     });
   }
-  function openModaInfoDishHandler() {
+  function openModaInfoDishHandler(item) {
     dispatchModuleAction({
       type: "OPEN_INFO",
+      item: item,
     });
   }
   function closeModaInfoDishHandler() {
@@ -53,13 +53,24 @@ function ModalProvider({ children }) {
     });
   }
 
+  function addAmountHandler(amount) {
+    console.log(amount);
+    dispatchModuleAction({
+      type: "ADD_AMOUNT",
+      amount: amount,
+    });
+  }
+
   const modalContext = {
+    amount: moduleState.amount,
+    itemInfo: moduleState.itemInfo,
     isOrder: moduleState.isOrder,
     isInfo: moduleState.isInfo,
     openOrder: openModalOrderHandler,
     closeOrder: closeModalOrderHandler,
     openInfoDish: openModaInfoDishHandler,
     closeInfoDish: closeModaInfoDishHandler,
+    addAmount: addAmountHandler,
   };
 
   return (

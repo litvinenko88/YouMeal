@@ -18,6 +18,7 @@
   margin: 0 auto;
   text-align: center;
   margin-top: 5rem;
+  grid-column: 1/ 4;
 }
 .error {
   font-size: 15rem;
@@ -56,6 +57,15 @@
     max-height: 61rem;
     gap: 1rem;
     padding-right: 1rem;
+  }
+  .error-container {
+    grid-column: 1/ 5;
+  }
+  .error-message{
+    font-size: var(--16);
+  }
+  .error{
+    font-size: 10rem;
   }
 }
 
