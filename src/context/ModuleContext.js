@@ -1,5 +1,4 @@
 import { createContext, useReducer, useContext } from "react";
-import { BasketContext } from "./BasketContext";
 
 export const ModalContext = createContext({});
 
@@ -7,11 +6,9 @@ const defaultModal = {
   isOrder: false,
   isInfo: false,
   itemInfo: [],
-  amount: 1,
 };
 
 function modalReducer(state, action) {
- 
   if (action.type === "OPEN_ORDER") {
     return { ...state, isOrder: true };
   }
@@ -23,6 +20,8 @@ function modalReducer(state, action) {
   }
   if (action.type === "CLOSE_INFO") {
     return { ...state, isInfo: false };
+  }
+  if (action.type === "ADD_AMOUNT") {
   }
 }
 
@@ -43,6 +42,7 @@ function ModalProvider({ children }) {
     });
   }
   function openModaInfoDishHandler(item) {
+    console.log(item);
     dispatchModuleAction({
       type: "OPEN_INFO",
       item: item,
@@ -54,10 +54,20 @@ function ModalProvider({ children }) {
     });
   }
 
-  function addAmountHandler(amount) {}
+  // function addItemAmountHandler(amount) {
+  //   dispatchModuleAction({
+  //     type: "ADD_AMOUNT",
+  //     amount: amount,
+  //   });
+  // }
+  // function removeItemAmountHandler(amount) {
+  //   dispatchModuleAction({
+  //     type: "REMOVE_AMOUNT",
+  //     amount: amount,
+  //   });
+  // }
 
   const modalContext = {
-    amount: moduleState.amount,
     itemInfo: moduleState.itemInfo,
     isOrder: moduleState.isOrder,
     isInfo: moduleState.isInfo,
@@ -65,7 +75,8 @@ function ModalProvider({ children }) {
     closeOrder: closeModalOrderHandler,
     openInfoDish: openModaInfoDishHandler,
     closeInfoDish: closeModaInfoDishHandler,
-    addAmount: addAmountHandler,
+    // addAmount: addItemAmountHandler,
+    // removeAmount: removeItemAmountHandler,
   };
 
   return (
@@ -76,4 +87,3 @@ function ModalProvider({ children }) {
 }
 
 export default ModalProvider;
-

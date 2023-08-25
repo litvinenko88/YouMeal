@@ -19,7 +19,8 @@ function MenuList(props) {
   }
 
   function openModalInfo() {
-    moduleContext.openInfoDish(props);
+    moduleContext.openInfoDish({...props, amount: 1});
+    document.body.style.overflow = "hidden";
   }
 
   return (

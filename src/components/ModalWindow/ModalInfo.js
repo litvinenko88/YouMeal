@@ -2,18 +2,20 @@ import styles from "./ModalInfo.module.css";
 import Modal from "../UI/Modal";
 import { useContext } from "react";
 import { ModalContext } from "../../context/ModuleContext";
-import { BasketContext } from "../../context/BasketContext";
 import Button from "../UI/Button";
 import QuantityButton from "../UI/QuantityButton";
 
-function ModalInfo(props) {
+function ModalInfo() {
   const modalContext = useContext(ModalContext);
-  const basketContext = useContext(BasketContext);
   const itemInfo = modalContext.itemInfo;
-  // console.log(basketContext);
 
   function closeModalInfo() {
     modalContext.closeInfoDish();
+    document.body.style.overflow = "unset";
+  }
+
+  function addToItemInfoHandler(item) {
+    console.log("Блюдо добавлено");
   }
 
   return (
@@ -40,11 +42,11 @@ function ModalInfo(props) {
         </div>
 
         <div className={styles["box-add"]}>
-          <Button>Добавить</Button>
+          <Button onClick={addToItemInfoHandler}>Добавить</Button>
         </div>
 
         <div className={styles["box-quantity"]}>
-          <QuantityButton amount="1" />
+          <QuantityButton amount={itemInfo.amount} />
           <h2 className={styles.price}>{itemInfo.price}₽</h2>
         </div>
       </div>
