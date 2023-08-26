@@ -18,9 +18,13 @@ function MenuList(props) {
     });
   }
 
+  function openModalInfoHandler() {
+    moduleContext.openInfoDish(props);
+  }
+
   return (
     <li className={styles.wrapper}>
-      <div className={styles.container}>
+      <div className={styles.container} onClick={openModalInfoHandler}>
         <img className={styles.img} src={props.img} alt="Блюдо" />
 
         <div>

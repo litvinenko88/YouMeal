@@ -14,6 +14,7 @@ function ModalInfo() {
     document.body.style.overflow = "unset";
   }
 
+  console.log(itemInfo);
   return (
     <Modal onClick={closeModalInfo}>
       <div className={styles.wrapper}>
