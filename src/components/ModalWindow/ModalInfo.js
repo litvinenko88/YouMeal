@@ -14,10 +14,6 @@ function ModalInfo() {
     document.body.style.overflow = "unset";
   }
 
-  function addToItemInfoHandler(item) {
-    console.log("Блюдо добавлено");
-  }
-
   return (
     <Modal onClick={closeModalInfo}>
       <div className={styles.wrapper}>
@@ -42,11 +38,15 @@ function ModalInfo() {
         </div>
 
         <div className={styles["box-add"]}>
-          <Button onClick={addToItemInfoHandler}>Добавить</Button>
+          <Button>Добавить</Button>
         </div>
 
         <div className={styles["box-quantity"]}>
-          <QuantityButton amount={itemInfo.amount} />
+          <QuantityButton
+            amount={1}
+            // onAdd={addItemHandler}
+            // onRemove={removeItemAmountHandler}
+          />
           <h2 className={styles.price}>{itemInfo.price}₽</h2>
         </div>
       </div>

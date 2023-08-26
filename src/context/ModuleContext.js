@@ -21,8 +21,6 @@ function modalReducer(state, action) {
   if (action.type === "CLOSE_INFO") {
     return { ...state, isInfo: false };
   }
-  if (action.type === "ADD_AMOUNT") {
-  }
 }
 
 function ModalProvider({ children }) {
@@ -42,7 +40,6 @@ function ModalProvider({ children }) {
     });
   }
   function openModaInfoDishHandler(item) {
-    console.log(item);
     dispatchModuleAction({
       type: "OPEN_INFO",
       item: item,
@@ -54,18 +51,13 @@ function ModalProvider({ children }) {
     });
   }
 
-  // function addItemAmountHandler(amount) {
-  //   dispatchModuleAction({
-  //     type: "ADD_AMOUNT",
-  //     amount: amount,
-  //   });
-  // }
-  // function removeItemAmountHandler(amount) {
-  //   dispatchModuleAction({
-  //     type: "REMOVE_AMOUNT",
-  //     amount: amount,
-  //   });
-  // }
+  function addItemHandler(item) {
+    console.log(item);
+    dispatchModuleAction({
+      type: "ADD_ITEM",
+      item: item,
+    });
+  }
 
   const modalContext = {
     itemInfo: moduleState.itemInfo,
@@ -75,8 +67,7 @@ function ModalProvider({ children }) {
     closeOrder: closeModalOrderHandler,
     openInfoDish: openModaInfoDishHandler,
     closeInfoDish: closeModaInfoDishHandler,
-    // addAmount: addItemAmountHandler,
-    // removeAmount: removeItemAmountHandler,
+    addItem: addItemHandler,
   };
 
   return (

@@ -18,14 +18,9 @@ function MenuList(props) {
     });
   }
 
-  function openModalInfo() {
-    moduleContext.openInfoDish({...props, amount: 1});
-    document.body.style.overflow = "hidden";
-  }
-
   return (
     <li className={styles.wrapper}>
-      <div className={styles.container} onClick={openModalInfo}>
+      <div className={styles.container}>
         <img className={styles.img} src={props.img} alt="Блюдо" />
 
         <div>
