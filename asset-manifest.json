@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/YouMeal/static/css/main.d4cd9065.css",
-    "main.js": "/YouMeal/static/js/main.5458e3e2.js",
+    "main.js": "/YouMeal/static/js/main.3618fdab.js",
     "static/media/bootstrap-icons.woff?": "/YouMeal/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
     "static/media/bootstrap-icons.woff2?": "/YouMeal/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
     "static/media/Nunito-BlackItalic.woff": "/YouMeal/static/media/Nunito-BlackItalic.a53681837a440259db0c.woff",
@@ -39,10 +39,10 @@
     "static/media/pic.png": "/YouMeal/static/media/pic.b932f7869e90b43207e4.png",
     "index.html": "/YouMeal/index.html",
     "main.d4cd9065.css.map": "/YouMeal/static/css/main.d4cd9065.css.map",
-    "main.5458e3e2.js.map": "/YouMeal/static/js/main.5458e3e2.js.map"
+    "main.3618fdab.js.map": "/YouMeal/static/js/main.3618fdab.js.map"
   },
   "entrypoints": [
     "static/css/main.d4cd9065.css",
-    "static/js/main.5458e3e2.js"
+    "static/js/main.3618fdab.js"
   ]
 }
