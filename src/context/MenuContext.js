@@ -20,19 +20,19 @@ function MenuProvider({ children }) {
       id: 1,
       icons: icon1,
       text: "Бургеры",
-      link: "https://gist.githubusercontent.com/litvinenko88/9d58c8d9576ada4b43465919cd1ac5bf/raw/9424d0c276e3dfe4b0e22af37379800b168eba02/burger.json",
+      link: "https://gist.githubusercontent.com/litvinenko88/9d58c8d9576ada4b43465919cd1ac5bf/raw/5c7ea64405969e281150c882b07b6ae6c88e1b90/burger.json",
     },
     {
       id: 2,
       icons: icon2,
       text: "Закуски",
-      link: "https://gist.githubusercontent.com/litvinenko88/24c9c9f39e8df448c03a2d50dbe0cc3f/raw/7f149e2a1ae2efac5d4b1b7f889684278cec12f9/snacks.json",
+      link: "https://gist.githubusercontent.com/litvinenko88/24c9c9f39e8df448c03a2d50dbe0cc3f/raw/aae89b08689a88e1866dc90892e882eb226ed583/snacks.json",
     },
     {
       id: 3,
       icons: icon3,
       text: "Хот-доги",
-      link: "https://gist.githubusercontent.com/litvinenko88/7edf6e45fcabb96fb66971ba18a2eb47/raw/7dcbd5a00551af19cf8c1e6b33dce925a43d5ee1/hot-dog.json",
+      link: "https://gist.githubusercontent.com/litvinenko88/7edf6e45fcabb96fb66971ba18a2eb47/raw/42095042efc799091f34815ccdb5a185643bbc71/hot-dog.json",
     },
     {
       id: 4,
@@ -44,7 +44,7 @@ function MenuProvider({ children }) {
       id: 5,
       icons: icon5,
       text: "Шаурма",
-      link: "https://gist.githubusercontent.com/litvinenko88/c816662f3fc86c9e73906d69dc7245ad/raw/746ed14f425d2f8760a627c2ebb1249839cd325a/shawarma.json",
+      link: "https://gist.githubusercontent.com/litvinenko88/c816662f3fc86c9e73906d69dc7245ad/raw/2b45a289506dd7c10401a195d55809c8e53d884b/shawarma.json",
     },
     {
       id: 6,
@@ -62,7 +62,7 @@ function MenuProvider({ children }) {
       id: 8,
       icons: icon8,
       text: "Дессерт",
-      link: "https://gist.githubusercontent.com/litvinenko88/63386ddb357175b69e276313539def5c/raw/5d97f425fd340e6765cff4bffb1af8077d2cc253/dessert.json",
+      link: "https://gist.githubusercontent.com/litvinenko88/63386ddb357175b69e276313539def5c/raw/1158be8e68c12fa3c7c2b0bca7910a5a7344cc7c/dessert.json",
     },
     {
       id: 9,
@@ -72,7 +72,6 @@ function MenuProvider({ children }) {
     },
   ]);
 
-  
   return (
     <MenuContext.Provider value={{ menu, activ, setActiv }}>
       {children}
